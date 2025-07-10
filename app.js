@@ -14,7 +14,7 @@ app.use(express.json()); // tetap diperlukan untuk non-multipart
 app.use(express.urlencoded({ extended: true }));
 
 // Akses file statis dan file upload
-const frontEndPath = path.join(__dirname, "../front_end/html/");
+const frontEndPath = path.join(__dirname, "/front_end/html/");
 console.log("Serving static files from:", frontEndPath);
 app.use(express.static(frontEndPath));
 app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));
