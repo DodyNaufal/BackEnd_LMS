@@ -5,7 +5,8 @@ const fs = require("fs");
 require("dotenv").config();
 
 const app = express();
-const port = 3000;
+
+const PORT = process.env.PORT || 3000;
 
 // Middleware global
 app.use(cors());
@@ -29,6 +30,6 @@ app.use("/api/users", usersRoutes);
 app.use("/api/dashboard", dashboardRoutes); // ⬅️ tidak perlu multer di sini
 
 // Jalankan server
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
