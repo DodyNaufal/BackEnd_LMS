@@ -10,3 +10,14 @@ const pool = mysql.createPool({
 });
 
 module.exports = pool;
+
+// const mysql = require("mysql2/promise");
+
+// const db = mysql.createPool({
+//   host: "localhost", // Jika pakai XAMPP, tetap 'localhost'
+//   user: "root", // Default user XAMPP
+//   password: "", // Default tanpa password
+//   database: "lms", // Ganti dengan nama database kamu
+// });
+
+// module.exports = db;
